@@ -1,6 +1,6 @@
 ﻿<head>
 <meta http-equiv="Content-Type" content="text/html;" charset=utf-8/>
-<title>用户登录</title>
+<title>用户注册</title>
 <style type="text/css">
     html{font-size:12px;}
     fieldset{width:520px; margin: 0 auto;}
@@ -35,8 +35,8 @@ function InputCheck(LoginForm)
 <body>
 <div>
 <fieldset>
-<legend>用户登录</legend>
-<form name="LoginForm" method="post" action="/Home/Index/login" onSubmit="return InputCheck(this)">
+<legend>用户注册</legend>
+<form name="LoginForm" method="post" action="/Home/User/register" onSubmit="return InputCheck(this)">
 <p>
 <label for="username" class="label">用户名:</label>
 <input id="username" name="username" type="text" class="input" />
@@ -46,11 +46,19 @@ function InputCheck(LoginForm)
 <input id="password" name="password" type="password" class="input" />
 <p/>
 <p>
+<label for="email" class="label">邮 箱:</label>
+<input id="email" name="email" type="text" class="input" />
+<p/>
+<p>
+<label for="phone" class="label">电 话:</label>
+<input id="phone" name="phone" type="text" class="input" />
+<p/>
+<p>
 <label for="level" class="label">级别:</label>
 <input id="level" name="level" type="text" class="input" />
 <p/>
 <p>
-<input type="submit" name="submit" value="  确 定  " class="left" /> <a href="/Home/Index/register">注册</a>
+<input type="submit" name="submit" value="  注册  " class="left" /> <a href="/Home/User/login">登陆</a>
 </p>
 </form>
 </fieldset>
