@@ -41,6 +41,7 @@ class UserController extends Controller {
     public function logout(){
             $_SESSION['userid'] =  null;
             $this->display(T('User/login'));
+            //$this->success('ÍË³ö', '/User/login', 3);
         }
 	public function register($username='null', $password='null', $email=null, $phone=null, $level=3){
 	    if(IS_POST){
