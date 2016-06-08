@@ -25,12 +25,13 @@ class UserController extends Controller {
                 $_SESSION['level'] =  $level;
                 //var_dump($_SESSION['userid'] );
                 //var_dump($_SESSION['level'] ) ;
-                if ($_SESSION['level'] == 1)
-                    $this->show("enter main page with admin");
-                elseif ($_SESSION['level'] == 2)
-                    $this->show("enter main page with develop");
-                elseif ($_SESSION['level'] == 3)
-                    $this->show("enter main page with service");
+		            if ($_SESSION['level'] == 1)
+		                //$this->show("enter main page with admin");
+		                redirect('/Admin/Index/index',1, 'jump to admin main page');
+		            elseif ($_SESSION['level'] == 2)
+		                redirect('/Develop/Index/index',1, 'jump to product main page');
+		            else 
+		                redirect('/Service/Index/index',1, 'jump to service main page');
             }else{
                 $this->display();
             }
@@ -69,12 +70,13 @@ class UserController extends Controller {
                 $_SESSION['userid'] =  md5($username);
                 $_SESSION['level'] =  $level;
             
-                if ($_SESSION['level'] == 1)
-                    $this->show("enter main page with admin");
-                elseif ($_SESSION['level'] == 2)
-                    $this->show("enter main page with develop");
-                elseif ($_SESSION['level'] == 3)
-                    $this->show("enter main page with service");
+            if ($_SESSION['level'] == 1)
+                //$this->show("enter main page with admin");
+                redirect('/Admin/Index/index',1, 'jump to admin main page');
+            elseif ($_SESSION['level'] == 2)
+                redirect('/Develop/Index/index',1, 'jump to product main page');
+            else 
+                redirect('/Service/Index/index',1, 'jump to service main page');
             }
             else{
                 $this->display();
