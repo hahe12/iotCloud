@@ -11,15 +11,13 @@
 </style>
 </head>
 <html>
+<frameset rows="180,*">
+    <frame noresize="noresize"  src="/Admin/Index/head.html">
 
-<frameset rows="20%,80%">
-    <frame src="/Admin/Index/head.html">
-
-    <frameset cols="20%,80%">
-      <frame src="/Admin/Index/left.html">
-      <frame name="content" src="/Admin/Index/right.html">
+    <frameset cols="200, *">
+      <frame noresize="noresize"  marginheight="0" src="/Admin/Index/left.html">
+      <frame noresize="noresize"  name="content" src="/Admin/Index/right.html">
     
     </frameset>
 </frameset>
-
 </html>
